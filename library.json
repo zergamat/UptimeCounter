@@ -18,6 +18,9 @@
   ],
   "license": "GNUv3",
   "homepage": "https://www.helloworld.org/",
+  "dependencies": {
+    "sstaub/Ticker": "~4.4.0"
+  },
   "frameworks": "*",
   "platforms": "*"
 }
