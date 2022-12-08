@@ -17,7 +17,8 @@
     }
   ],
   "license": "GNUv3",
-  "dependencies": {
+    "dependencies":
+  {
     "sstaub/Ticker": "~4.4.0"
   },
   "frameworks": "*",
