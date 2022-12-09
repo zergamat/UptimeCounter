@@ -1,22 +1,22 @@
 {
   "name": "UptimeCounter",
-  "version": "0.9",
-  "description": "Simple, not accurate uptime counter based on millis(). Counts beyound rollovers. ",
+  "version": "0.9.0",
+  "description": "Simple uptime counter",
   "keywords": "uptime",
-  "repository": {
+  "repository":
+  {
     "type": "git",
     "url": "https://github.com/zergamat/UptimeCounter.git"
   },
-  "authors": [
+  "authors":
+  [
     {
       "name": "zergamat",
-      "email": "",
-      "url": ""
+      "email": "me@john-smith.com",
+      "url": "https://www.john-smith/contact"
     }
   ],
-  "license": "GNU General Public License v3",
-  "homepage": "",
-  "dependencies": "",
+  "license": "GNUv3",
   "frameworks": "*",
   "platforms": "*"
 }
