@@ -1,5 +1,4 @@
 #include "UptimeCounter.h"
-//new ticker
 
 static unsigned long Rollovers = 0;
 static unsigned long MillisGuard = 0;

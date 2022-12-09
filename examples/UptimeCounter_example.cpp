@@ -26,4 +26,5 @@ void loop() {
   Serial.println(UpTime.uptime());
   Serial.println();
 
+  UpTime.update();
 }
