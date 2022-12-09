@@ -17,6 +17,13 @@
     }
   ],
   "license": "GNUv3",
+<<<<<<< HEAD
+=======
+    "dependencies":
+  {
+    "sstaub/Ticker": "~4.4.0"
+  },
+>>>>>>> f149e17f35fb1a291a9b2cef701ca450fbf72c57
   "frameworks": "*",
   "platforms": "*"
 }
