@@ -2,6 +2,7 @@
 
 static unsigned long Rollovers = 0;
 static unsigned long MillisGuard = 0;
+static unsigned long PmUpdate = 0;
 static char GlobalBuffer[20] = "";
 
 UptimeCounter::UptimeCounter(int tickerCallPeriod)
@@ -11,6 +12,9 @@ UptimeCounter::UptimeCounter(int tickerCallPeriod)
 
 void UptimeCounter::update()
 {
+    if (millis() - PmUpdate > TICKER_DEFAULT_PERIOD * 1000)
+    {
+    
     if (millis() > MillisGuard)
     {
         MillisGuard = millis();
@@ -20,6 +24,8 @@ void UptimeCounter::update()
         Rollovers++;
         MillisGuard = millis();
     }
+    }
+    PmUpdate = millis();
 }
 
 void UptimeCounter::tick()
