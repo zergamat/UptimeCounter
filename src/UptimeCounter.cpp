@@ -7,9 +7,20 @@ static char GlobalBuffer[20] = "";
 
 UptimeCounter::UptimeCounter(int tickerCallPeriod)
 {
-    ticker = new Ticker();
-    ticker->attach(tickerCallPeriod, tick);
     MillisGuard = millis();
+}
+
+void UptimeCounter::update()
+{
+    if (millis() > MillisGuard)
+    {
+        MillisGuard = millis();
+    }
+    else
+    {
+        Rollovers++;
+        MillisGuard = millis();
+    }
 }
 
 void UptimeCounter::tick()

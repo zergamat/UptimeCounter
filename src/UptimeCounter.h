@@ -4,7 +4,6 @@
 #define UPTIMECOUNTER_H
 
 #include <Arduino.h>
-#include <Ticker.h>
 
 class Ticker;
 
@@ -24,12 +23,12 @@ private:
 
 public:
     UptimeCounter(int tickerCallPeriod = TICKER_DEFAULT_PERIOD);
-    // uptime() - returns cstring in format: DDd HH:MM:SS (1d 12:05:56)
-    char* uptime();
+    char *uptime(); // - returns cstring in format: DDd HH:MM:SS (1d 12:05:56)
     unsigned long days();
     unsigned long hours();
     unsigned long minutes();
     unsigned long secounds();
+    void update(); // - have to be in main loop
     // ~UptimeCounter();
 };
 
