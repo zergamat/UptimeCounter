@@ -7,70 +7,70 @@ static char GlobalBuffer[20] = "";
 
 UptimeCounter::UptimeCounter(int tickerCallPeriod)
 {
-    MillisGuard = millis();
+    MillisGuard = micros();
 }
 
 void UptimeCounter::update()
 {
-    if (millis() - PmUpdate > TICKER_DEFAULT_PERIOD * 1000)
+    if (micros() - PmUpdate > TICKER_DEFAULT_PERIOD * 1000)
     {
     
-    if (millis() > MillisGuard)
+    if (micros() > MillisGuard)
     {
-        MillisGuard = millis();
+        MillisGuard = micros();
     }
     else
     {
         Rollovers++;
-        MillisGuard = millis();
+        MillisGuard = micros();
     }
     }
-    PmUpdate = millis();
+    PmUpdate = micros();
 }
 
 void UptimeCounter::tick()
 {
-    if (millis() > MillisGuard) {
-        MillisGuard = millis();
+    if (micros() > MillisGuard) {
+        MillisGuard = micros();
     }
     else
     {
         Rollovers++;
-        MillisGuard = millis();
+        MillisGuard = micros();
     }
 }
 
 unsigned long UptimeCounter::days()
 {
-    unsigned long decisecoundsPassed = Rollovers * DS_IN_ROLLOVER + millis() / 100;
+    unsigned long decisecoundsPassed = Rollovers * DS_IN_ROLLOVER + micros() / 100;
     int daysPassed = decisecoundsPassed / DS_IN_DAY;
     return daysPassed;
 }
 
 unsigned long UptimeCounter::hours()
 {
-    unsigned long decisecoundsPassed = Rollovers * DS_IN_ROLLOVER + millis() / 100;
+    unsigned long decisecoundsPassed = Rollovers * DS_IN_ROLLOVER + micros() / 100;
     int hoursPassed = decisecoundsPassed / DS_IN_HOUR;
     return hoursPassed;
 }
 
 unsigned long UptimeCounter::minutes()
 {
-    unsigned long decisecoundsPassed = Rollovers * DS_IN_ROLLOVER + millis() / 100;
+    unsigned long decisecoundsPassed = Rollovers * DS_IN_ROLLOVER + micros() / 100;
     int minutesPassed = decisecoundsPassed / DS_IN_MINUTE;
     return minutesPassed;
 }
 
 unsigned long UptimeCounter::secounds()
 {
-    unsigned long decisecoundsPassed = Rollovers * DS_IN_ROLLOVER + millis() / 100;
+    unsigned long decisecoundsPassed = Rollovers * DS_IN_ROLLOVER + micros() / 100;
     int secoundsPassed = decisecoundsPassed / DS_IN_SECOUND;
     return secoundsPassed;
 }
 
 char *UptimeCounter::uptime()
 {
-    unsigned long decisecoundsPassed = Rollovers * DS_IN_ROLLOVER + millis()/100;
+    unsigned long decisecoundsPassed = Rollovers * DS_IN_ROLLOVER + micros()/100;
     unsigned long daysToPrint = decisecoundsPassed / DS_IN_DAY;
     unsigned long hoursToPrint = (decisecoundsPassed % DS_IN_DAY) / DS_IN_HOUR;
     unsigned long minutesToPrint = (decisecoundsPassed % DS_IN_HOUR) / DS_IN_MINUTE;
