@@ -16,9 +16,7 @@ private:
     static void tick();
     static const int TICKER_DEFAULT_PERIOD = 1; //seconds
     static const unsigned long DS_IN_ROLLOVER = 42949673; //decisecounds in rollover
-    //                                          4294967295 for arduino uno
-    //                                          4294967295 for ESP8266
-    //                                          4294967295 for ESP32
+    static const unsigned long DS_IN_DAY = 864000;        // decisecounds in day
     static const unsigned long DS_IN_HOUR = 36000; //decisecounds
     static const unsigned long DS_IN_MINUTE = 600; //decisecounds
     static const unsigned long DS_IN_SECOUND = 10; //decisecounds
