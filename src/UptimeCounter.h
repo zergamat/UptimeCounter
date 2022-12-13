@@ -1,4 +1,3 @@
-// SPDX - License - Identifier : MIT
 // Simple, not accurate uptime counter based on millis(). Counts beyound rollovers.
 
 #ifndef UPTIMECOUNTER_H

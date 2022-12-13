@@ -1,4 +1,3 @@
-// SPDX - License - Identifier : MIT
 #include "UptimeCounter.h"
 
 static unsigned long Rollovers = 0;

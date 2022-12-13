@@ -1,4 +1,3 @@
-// SPDX - License - Identifier : MIT
 #include <Arduino.h>
 #include <UptimeCounter.h>
 
