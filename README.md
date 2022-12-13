@@ -7,7 +7,7 @@ Released under MIT License.
 
 ## How to use
 Pseudocode
-'''
+```
 #include <UptimeCounter.h>
 ...
 UptimeCounter UpTime;
@@ -27,11 +27,11 @@ void loop() {
   ...
   UpTime.update();
 }
-'''
+```
 
 Example print on serial monitor:
-3
-81
-4879
-292763
-3d 09:19:23
+  3
+  81
+  4879
+  292763
+  3d 09:19:23
