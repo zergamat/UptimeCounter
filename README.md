@@ -7,7 +7,7 @@ Released under MIT License.
 
 ## How to use
 Pseudocode
-```
+```C++
 #include <UptimeCounter.h>
 ...
 UptimeCounter UpTime;
