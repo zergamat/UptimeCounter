@@ -29,9 +29,9 @@ void loop() {
 }
 ```
 
-Example print on serial monitor:
-  3
-  81
-  4879
-  292763
-  3d 09:19:23
+Example print on serial monitor:  
+3  
+81  
+4879  
+292763  
+3d 09:19:23
