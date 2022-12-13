@@ -22,7 +22,7 @@ void UptimeCounter::update()
     else
     {
         Rollovers++;
-        MillisGuard = millis();
+        MillisGuard = millis();else
     }
     }
     PmUpdate = millis();
@@ -50,21 +50,21 @@ unsigned long UptimeCounter::days()
 unsigned long UptimeCounter::hours()
 {
     unsigned long decisecoundsPassed = Rollovers * DS_IN_ROLLOVER + millis() / 100;
-    int hoursPassed = decisecoundsPassed / DS_IN_HOUR;
+    unsigned long hoursPassed = decisecoundsPassed / DS_IN_HOUR;
     return hoursPassed;
 }
 
 unsigned long UptimeCounter::minutes()
 {
     unsigned long decisecoundsPassed = Rollovers * DS_IN_ROLLOVER + millis() / 100;
-    int minutesPassed = decisecoundsPassed / DS_IN_MINUTE;
+    unsigned long minutesPassed = decisecoundsPassed / DS_IN_MINUTE;
     return minutesPassed;
 }
 
 unsigned long UptimeCounter::secounds()
 {
     unsigned long decisecoundsPassed = Rollovers * DS_IN_ROLLOVER + millis() / 100;
-    int secoundsPassed = decisecoundsPassed / DS_IN_SECOUND;
+    unsigned long secoundsPassed = decisecoundsPassed / DS_IN_SECOUND;
     return secoundsPassed;
 }
 
