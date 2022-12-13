@@ -2,10 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"name": "UptimeCounter_testProject",
-			"path": "../UptimeCounter_testProject"
 		}
 	],
 	"settings": {}
