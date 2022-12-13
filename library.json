@@ -12,11 +12,11 @@
   [
     {
       "name": "zergamat",
-      "email": "",
+      "email": "zergamat.github@gmail.com",
       "url": ""
     }
   ],
-  "license": "GNUv3",
+  "license": "MIT",
   "frameworks": "*",
   "platforms": "*"
 }
