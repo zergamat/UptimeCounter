@@ -22,7 +22,7 @@ void UptimeCounter::update()
     else
     {
         Rollovers++;
-        MillisGuard = millis();else
+        MillisGuard = millis();
     }
     }
     PmUpdate = millis();
